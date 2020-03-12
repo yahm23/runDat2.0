@@ -11,11 +11,11 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 exports.getRunningDistanceKM = functions.https.onRequest((request, response) => {
     admin.firestore().collection('runningData').get()
     .then(data =>{
-        runningData=[];
+        let runningData=[];
         data.forEach(doc => {
             runningData.push(doc.data());
         })
         return response.json(runningData);
-    });
+    })
     .catch(err=>console.error(err));
 });
