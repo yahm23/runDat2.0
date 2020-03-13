@@ -1,10 +1,5 @@
 const functions = require('firebase-functions');
-// const admin = require('firebase-admin')
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
 var admin = require("firebase-admin");
-
 var serviceAccount = require("../runDatSDK.json");
 
 admin.initializeApp({
@@ -12,28 +7,29 @@ admin.initializeApp({
   databaseURL: "https://rundat-e0a41.firebaseio.com"
 });
 
+const express = require('express');
+const app = express();
 
-exports.helloWorld = functions.https.onRequest((request, response) => {
- response.send("Hello from world!");
-});
 
-exports.getRunningData = functions.https.onRequest((request, response) => {
+
+
+exports.getRunningData = functions.https.onRequest((req, res) => {
     admin.firestore().collection('runningData').get()
     .then(data =>{
         let runningData=[];
         data.forEach(doc => {
             runningData.push(doc.data());
         })
-        return response.json(runningData);
+        return res.json(runningData);
     })
     .catch(err=>console.error(err));
 });
 
-exports.createRunningData= functions.https.onRequest((request, response) => {
+exports.createRunningData= functions.https.onRequest((req, res) => {
    const newRunningData={
-       DistanceKm:request.body.DistanceKm,
-       Time:request.body.Time,
-       userHandle:request.body.userHandle
+       DistanceKm:req.body.DistanceKm,
+       Time:req.body.Time,
+       userHandle:req.body.userHandle
    };
    
     admin    
@@ -41,10 +37,10 @@ exports.createRunningData= functions.https.onRequest((request, response) => {
     .collection('runningData')
     .add(newRunningData)
     .then((doc) =>{
-        response.json({message:`document ${doc.id} created successfully`});
+        res.json({message:`document ${doc.id} created successfully`});
     })
     .catch(err=>{
-        response.status(500).json({error:`${request.body.DistanceKm} if exists, still error`});
+        res.status(500).json({error:`${req.body.DistanceKm} if exists, still error`});
         console.error(err);
     });
 });

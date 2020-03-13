@@ -1,403 +1,60 @@
-[debug] [2020-03-13T13:17:47.107Z] ----------------------------------------------------------------------
-[debug] [2020-03-13T13:17:47.109Z] Command:       /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/firebase serve
-[debug] [2020-03-13T13:17:47.109Z] CLI Version:   7.14.0
-[debug] [2020-03-13T13:17:47.109Z] Platform:      darwin
-[debug] [2020-03-13T13:17:47.109Z] Node Version:  v12.10.0
-[debug] [2020-03-13T13:17:47.112Z] Time:          Fri Mar 13 2020 13:17:47 GMT+0000 (Greenwich Mean Time)
-[debug] [2020-03-13T13:17:47.112Z] ----------------------------------------------------------------------
-[debug] [2020-03-13T13:17:47.112Z] 
-[debug] [2020-03-13T13:17:47.125Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-03-13T13:17:47.126Z] > authorizing via signed-in user
-[debug] [2020-03-13T13:17:47.126Z] [iam] checking project rundat-e0a41 for permissions ["firebase.projects.get"]
-[debug] [2020-03-13T13:17:47.128Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rundat-e0a41:testIamPermissions  
+[debug] [2020-03-13T14:36:53.738Z] ----------------------------------------------------------------------
+[debug] [2020-03-13T14:36:53.740Z] Command:       /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/firebase serve
+[debug] [2020-03-13T14:36:53.741Z] CLI Version:   7.14.0
+[debug] [2020-03-13T14:36:53.741Z] Platform:      darwin
+[debug] [2020-03-13T14:36:53.741Z] Node Version:  v12.10.0
+[debug] [2020-03-13T14:36:53.742Z] Time:          Fri Mar 13 2020 14:36:53 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-03-13T14:36:53.742Z] ----------------------------------------------------------------------
+[debug] [2020-03-13T14:36:53.742Z] 
+[debug] [2020-03-13T14:36:53.755Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-13T14:36:53.756Z] > authorizing via signed-in user
+[debug] [2020-03-13T14:36:53.756Z] [iam] checking project rundat-e0a41 for permissions ["firebase.projects.get"]
+[debug] [2020-03-13T14:36:53.758Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rundat-e0a41:testIamPermissions  
 
-[debug] [2020-03-13T13:17:48.012Z] <<< HTTP RESPONSE 200
-[debug] [2020-03-13T13:17:48.015Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rundat-e0a41  
+[debug] [2020-03-13T14:36:54.636Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-13T14:36:54.639Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rundat-e0a41  
  
-[debug] [2020-03-13T13:17:48.294Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-13T14:36:54.924Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/yousef/codeclan_work/run_dat'...
 [info] 
 [warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
 [info] ✔  functions: functions emulator started at http://localhost:5000
 [info] i  functions: Watching "/Users/yousef/codeclan_work/run_dat/functions" for Cloud Functions...
-[debug] [2020-03-13T13:17:48.601Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:17:48.601Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-03-13T13:17:48.601Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:17:48.602Z] [worker-~diagnostic~-c64eafba-5f92-489b-aec2-e0cc7cfbff6e]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63506.sock
-[debug] [2020-03-13T13:17:48.603Z] [worker-~diagnostic~-c64eafba-5f92-489b-aec2-e0cc7cfbff6e]: BUSY
-[debug] [2020-03-13T13:17:48.903Z] [runtime-status] [63506] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:17:48.906Z] [runtime-status] [63506] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:17:48.909Z] [runtime-status] [63506] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:17:48.911Z] [runtime-status] [63506] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:17:48.913Z] [runtime-status] [63506] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[warn] ⚠  Error: Cannot find module 'path/to/serviceAccountKey.json'
-Require stack:
-- /Users/yousef/codeclan_work/run_dat/functions/index.js
-- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js
-    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
-    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-    at require (internal/modules/cjs/helpers.js:68:18)
-    at Object.<anonymous> (/Users/yousef/codeclan_work/run_dat/functions/index.js:8:22)
-    at Module._compile (internal/modules/cjs/loader.js:936:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
-    at Module.load (internal/modules/cjs/loader.js:790:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-[warn] ⚠  We were unable to load your functions code. (see above)
-[debug] [2020-03-13T13:17:49.005Z] [worker-~diagnostic~-c64eafba-5f92-489b-aec2-e0cc7cfbff6e]: exited
-[debug] [2020-03-13T13:17:49.005Z] [worker-~diagnostic~-c64eafba-5f92-489b-aec2-e0cc7cfbff6e]: FINISHED
-[debug] [2020-03-13T13:18:17.563Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:18:18.569Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
-[debug] [2020-03-13T13:18:18.577Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:18:18.577Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-03-13T13:18:18.577Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:18:18.578Z] [worker-~diagnostic~-d095e050-d85c-4792-a5e3-4e2721e3f6e0]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63508.sock
-[debug] [2020-03-13T13:18:18.578Z] [worker-~diagnostic~-d095e050-d85c-4792-a5e3-4e2721e3f6e0]: BUSY
-[debug] [2020-03-13T13:18:18.836Z] [runtime-status] [63508] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:18:18.838Z] [runtime-status] [63508] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:18:18.840Z] [runtime-status] [63508] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:18:18.841Z] [runtime-status] [63508] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:18:18.841Z] [runtime-status] [63508] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[warn] ⚠  /Users/yousef/codeclan_work/run_dat/functions/index.js:8
-var serviceAccount = require("firebase-adminsdk-5vnl2@rundat-e0a41.iam.gserviceaccount.com
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-SyntaxError: Invalid or unexpected token
-    at Module._compile (internal/modules/cjs/loader.js:872:18)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
-    at Module.load (internal/modules/cjs/loader.js:790:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-    at require (internal/modules/cjs/helpers.js:68:18)
-    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:719:33
-    at Generator.next (<anonymous>)
-    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:5:58)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-[warn] ⚠  We were unable to load your functions code. (see above)
-[debug] [2020-03-13T13:18:18.898Z] [worker-~diagnostic~-d095e050-d85c-4792-a5e3-4e2721e3f6e0]: exited
-[debug] [2020-03-13T13:18:18.898Z] [worker-~diagnostic~-d095e050-d85c-4792-a5e3-4e2721e3f6e0]: FINISHED
-[debug] [2020-03-13T13:18:19.979Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:18:20.984Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
-[debug] [2020-03-13T13:18:20.991Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:18:20.991Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-03-13T13:18:20.991Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:18:20.992Z] [worker-~diagnostic~-8b889cd1-4546-4c65-afb5-ba138f2af323]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63517.sock
-[debug] [2020-03-13T13:18:20.992Z] [worker-~diagnostic~-8b889cd1-4546-4c65-afb5-ba138f2af323]: BUSY
-[debug] [2020-03-13T13:18:21.347Z] [runtime-status] [63517] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:18:21.349Z] [runtime-status] [63517] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:18:21.351Z] [runtime-status] [63517] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:18:21.353Z] [runtime-status] [63517] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:18:21.354Z] [runtime-status] [63517] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[warn] ⚠  Error: Cannot find module 'path/to/serviceAccountKey.json'
-Require stack:
-- /Users/yousef/codeclan_work/run_dat/functions/index.js
-- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js
-    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
-    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-    at require (internal/modules/cjs/helpers.js:68:18)
-    at Object.<anonymous> (/Users/yousef/codeclan_work/run_dat/functions/index.js:8:22)
-    at Module._compile (internal/modules/cjs/loader.js:936:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
-    at Module.load (internal/modules/cjs/loader.js:790:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-[warn] ⚠  We were unable to load your functions code. (see above)
-[debug] [2020-03-13T13:18:21.417Z] [worker-~diagnostic~-8b889cd1-4546-4c65-afb5-ba138f2af323]: exited
-[debug] [2020-03-13T13:18:21.417Z] [worker-~diagnostic~-8b889cd1-4546-4c65-afb5-ba138f2af323]: FINISHED
-[debug] [2020-03-13T13:18:22.680Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:18:22.779Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:18:23.781Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
-[debug] [2020-03-13T13:18:23.794Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:18:23.794Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-03-13T13:18:23.794Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:18:23.794Z] [worker-~diagnostic~-3fc77bb8-6518-46c0-98df-d1c415a00180]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63521.sock
-[debug] [2020-03-13T13:18:23.794Z] [worker-~diagnostic~-3fc77bb8-6518-46c0-98df-d1c415a00180]: BUSY
-[debug] [2020-03-13T13:18:24.285Z] [runtime-status] [63521] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:18:24.325Z] [runtime-status] [63521] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:18:24.354Z] [runtime-status] [63521] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:18:24.358Z] [runtime-status] [63521] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:18:24.359Z] [runtime-status] [63521] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[warn] ⚠  /Users/yousef/codeclan_work/run_dat/functions/index.js:8
-var serviceAccount = require("firebase-adminsdk-5vnl2@rundat-e0a41.iam.gserviceaccount.com
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-SyntaxError: Invalid or unexpected token
-    at Module._compile (internal/modules/cjs/loader.js:872:18)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
-    at Module.load (internal/modules/cjs/loader.js:790:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-    at require (internal/modules/cjs/helpers.js:68:18)
-    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:719:33
-    at Generator.next (<anonymous>)
-    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:5:58)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-[warn] ⚠  We were unable to load your functions code. (see above)
-[debug] [2020-03-13T13:18:24.462Z] [worker-~diagnostic~-3fc77bb8-6518-46c0-98df-d1c415a00180]: exited
-[debug] [2020-03-13T13:18:24.462Z] [worker-~diagnostic~-3fc77bb8-6518-46c0-98df-d1c415a00180]: FINISHED
-[debug] [2020-03-13T13:18:24.778Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:18:25.779Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
-[debug] [2020-03-13T13:18:25.784Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:18:25.784Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-03-13T13:18:25.784Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:18:25.785Z] [worker-~diagnostic~-0ec20fc0-07a4-46b2-a96b-fd3b0d12afe1]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63527.sock
-[debug] [2020-03-13T13:18:25.785Z] [worker-~diagnostic~-0ec20fc0-07a4-46b2-a96b-fd3b0d12afe1]: BUSY
-[debug] [2020-03-13T13:18:26.260Z] [runtime-status] [63527] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:18:26.263Z] [runtime-status] [63527] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:18:26.268Z] [runtime-status] [63527] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:18:26.269Z] [runtime-status] [63527] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:18:26.270Z] [runtime-status] [63527] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[warn] ⚠  Error: Cannot find module 'firebase-adminsdk-5vnl2@rundat-e0a41.iam.gserviceaccount.com'
-Require stack:
-- /Users/yousef/codeclan_work/run_dat/functions/index.js
-- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js
-    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
-    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-    at require (internal/modules/cjs/helpers.js:68:18)
-    at Object.<anonymous> (/Users/yousef/codeclan_work/run_dat/functions/index.js:8:22)
-    at Module._compile (internal/modules/cjs/loader.js:936:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
-    at Module.load (internal/modules/cjs/loader.js:790:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-[warn] ⚠  We were unable to load your functions code. (see above)
-[debug] [2020-03-13T13:18:26.344Z] [worker-~diagnostic~-0ec20fc0-07a4-46b2-a96b-fd3b0d12afe1]: exited
-[debug] [2020-03-13T13:18:26.344Z] [worker-~diagnostic~-0ec20fc0-07a4-46b2-a96b-fd3b0d12afe1]: FINISHED
-[debug] [2020-03-13T13:22:07.859Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:22:08.865Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
-[debug] [2020-03-13T13:22:08.876Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:22:08.877Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-03-13T13:22:08.877Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:22:08.877Z] [worker-~diagnostic~-9a38d82c-6eb6-48e8-9fac-f7d2d1295f14]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63612.sock
-[debug] [2020-03-13T13:22:08.877Z] [worker-~diagnostic~-9a38d82c-6eb6-48e8-9fac-f7d2d1295f14]: BUSY
-[debug] [2020-03-13T13:22:09.778Z] [runtime-status] [63612] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:22:09.780Z] [runtime-status] [63612] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:22:09.782Z] [runtime-status] [63612] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:22:09.783Z] [runtime-status] [63612] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:22:09.783Z] [runtime-status] [63612] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[warn] ⚠  Error: Cannot find module 'runDatSDK.json'
-Require stack:
-- /Users/yousef/codeclan_work/run_dat/functions/index.js
-- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js
-    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
-    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-    at require (internal/modules/cjs/helpers.js:68:18)
-    at Object.<anonymous> (/Users/yousef/codeclan_work/run_dat/functions/index.js:8:22)
-    at Module._compile (internal/modules/cjs/loader.js:936:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
-    at Module.load (internal/modules/cjs/loader.js:790:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
-    at Module.require (internal/modules/cjs/loader.js:830:19)
-[warn] ⚠  We were unable to load your functions code. (see above)
-[debug] [2020-03-13T13:22:09.868Z] [worker-~diagnostic~-9a38d82c-6eb6-48e8-9fac-f7d2d1295f14]: exited
-[debug] [2020-03-13T13:22:09.868Z] [worker-~diagnostic~-9a38d82c-6eb6-48e8-9fac-f7d2d1295f14]: FINISHED
-[debug] [2020-03-13T13:22:14.381Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:22:15.382Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
-[debug] [2020-03-13T13:22:15.387Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:22:15.387Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
-[debug] [2020-03-13T13:22:15.387Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:22:15.387Z] [worker-~diagnostic~-ae9e70fd-27af-475d-a70e-42e88ee56051]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63621.sock
-[debug] [2020-03-13T13:22:15.388Z] [worker-~diagnostic~-ae9e70fd-27af-475d-a70e-42e88ee56051]: BUSY
-[debug] [2020-03-13T13:22:15.846Z] [runtime-status] [63621] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:22:15.851Z] [runtime-status] [63621] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:22:15.853Z] [runtime-status] [63621] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:22:15.854Z] [runtime-status] [63621] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:22:15.856Z] [runtime-status] [63621] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[info] ✔  functions[helloWorld]: http function initialized (http://localhost:5000/rundat-e0a41/us-central1/helloWorld).
+[debug] [2020-03-13T14:36:54.983Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-13T14:36:54.983Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-13T14:36:54.983Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-13T14:36:54.984Z] [worker-~diagnostic~-a56d98e6-b6fd-42fb-93e8-72464e12d455]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_66674.sock
+[debug] [2020-03-13T14:36:54.984Z] [worker-~diagnostic~-a56d98e6-b6fd-42fb-93e8-72464e12d455]: BUSY
+[debug] [2020-03-13T14:36:55.344Z] [runtime-status] [66674] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
+[debug] [2020-03-13T14:36:55.345Z] [runtime-status] [66674] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-13T14:36:55.347Z] [runtime-status] [66674] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-13T14:36:55.348Z] [runtime-status] [66674] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T14:36:55.349Z] [runtime-status] [66674] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
 [info] ✔  functions[getRunningData]: http function initialized (http://localhost:5000/rundat-e0a41/us-central1/getRunningData).
 [info] ✔  functions[createRunningData]: http function initialized (http://localhost:5000/rundat-e0a41/us-central1/createRunningData).
-[debug] [2020-03-13T13:22:16.011Z] [worker-~diagnostic~-ae9e70fd-27af-475d-a70e-42e88ee56051]: IDLE
-[debug] [2020-03-13T13:22:31.525Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-03-13T13:22:31.525Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-03-13T13:22:31.526Z] Accepted request GET /rundat-e0a41/us-central1/getRunningData --> getRunningData
-[debug] [2020-03-13T13:22:31.530Z] [worker-pool] addWorker(getRunningData)
-[debug] [2020-03-13T13:22:31.530Z] [worker-pool] Adding worker with key getRunningData, total=1
-[debug] [2020-03-13T13:22:31.530Z] [worker-pool] submitWork(triggerId=getRunningData)
-[debug] [2020-03-13T13:22:31.530Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63634.sock
-[debug] [2020-03-13T13:22:31.530Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: BUSY
-[debug] [2020-03-13T13:22:31.805Z] [runtime-status] [63634] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:22:31.807Z] [runtime-status] [63634] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:22:31.809Z] [runtime-status] [63634] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:22:31.810Z] [runtime-status] [63634] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:22:31.811Z] [runtime-status] [63634] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:22:31.933Z] [runtime-status] [63634] Trigger "getRunningData" has been found, beginning invocation!
+[debug] [2020-03-13T14:36:55.530Z] [worker-~diagnostic~-a56d98e6-b6fd-42fb-93e8-72464e12d455]: IDLE
+[debug] [2020-03-13T14:37:06.693Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-13T14:37:06.693Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-13T14:37:06.694Z] Accepted request GET /rundat-e0a41/us-central1/getRunningData --> getRunningData
+[debug] [2020-03-13T14:37:06.699Z] [worker-pool] addWorker(getRunningData)
+[debug] [2020-03-13T14:37:06.699Z] [worker-pool] Adding worker with key getRunningData, total=1
+[debug] [2020-03-13T14:37:06.699Z] [worker-pool] submitWork(triggerId=getRunningData)
+[debug] [2020-03-13T14:37:06.700Z] [worker-getRunningData-40979db9-5dda-4c0e-9321-fd499064863e]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_66683.sock
+[debug] [2020-03-13T14:37:06.700Z] [worker-getRunningData-40979db9-5dda-4c0e-9321-fd499064863e]: BUSY
+[debug] [2020-03-13T14:37:06.941Z] [runtime-status] [66683] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
+[debug] [2020-03-13T14:37:06.943Z] [runtime-status] [66683] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-13T14:37:06.945Z] [runtime-status] [66683] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-13T14:37:06.947Z] [runtime-status] [66683] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T14:37:06.947Z] [runtime-status] [66683] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T14:37:07.084Z] [runtime-status] [66683] Trigger "getRunningData" has been found, beginning invocation!
 [info] i  functions: Beginning execution of "getRunningData"
-[debug] [2020-03-13T13:22:31.933Z] [runtime-status] [63634] triggerDefinition {"httpsTrigger":{},"name":"getRunningData","entryPoint":"getRunningData"}
-[debug] [2020-03-13T13:22:31.933Z] [runtime-status] [63634] Running getRunningData in mode HTTPS
-[debug] [2020-03-13T13:22:31.939Z] [runtime-status] [63634] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63634.sock
-[debug] [2020-03-13T13:22:31.946Z] [functions] Runtime ready! Sending request!
-[debug] [2020-03-13T13:22:31.957Z] [runtime-status] [63634] Ephemeral server handling GET request
-[debug] [2020-03-13T13:22:32.609Z] [runtime-status] [63634] Ephemeral server survived.
+[debug] [2020-03-13T14:37:07.085Z] [runtime-status] [66683] triggerDefinition {"httpsTrigger":{},"name":"getRunningData","entryPoint":"getRunningData"}
+[debug] [2020-03-13T14:37:07.085Z] [runtime-status] [66683] Running getRunningData in mode HTTPS
+[debug] [2020-03-13T14:37:07.088Z] [runtime-status] [66683] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_66683.sock
+[debug] [2020-03-13T14:37:07.093Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T14:37:07.109Z] [runtime-status] [66683] Ephemeral server handling GET request
+[debug] [2020-03-13T14:37:07.700Z] [runtime-status] [66683] Ephemeral server survived.
 [info] i  functions: Finished "getRunningData" in ~1s
-[debug] [2020-03-13T13:22:33.142Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: IDLE
-[debug] [2020-03-13T13:22:33.142Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-03-13T13:23:08.080Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-03-13T13:23:08.082Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-03-13T13:23:08.082Z] Accepted request GET /rundat-e0a41/us-central1/getRunningData --> getRunningData
-[debug] [2020-03-13T13:23:08.083Z] [worker-pool] submitWork(triggerId=getRunningData)
-[debug] [2020-03-13T13:23:08.083Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63634.sock
-[debug] [2020-03-13T13:23:08.084Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: BUSY
-[debug] [2020-03-13T13:23:08.087Z] [runtime-status] [63634] Trigger "getRunningData" has been found, beginning invocation!
-[info] i  functions: Beginning execution of "getRunningData"
-[debug] [2020-03-13T13:23:08.089Z] [runtime-status] [63634] triggerDefinition {"httpsTrigger":{},"name":"getRunningData","entryPoint":"getRunningData"}
-[debug] [2020-03-13T13:23:08.089Z] [runtime-status] [63634] Running getRunningData in mode HTTPS
-[debug] [2020-03-13T13:23:08.093Z] [runtime-status] [63634] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63634.sock
-[debug] [2020-03-13T13:23:08.097Z] [functions] Runtime ready! Sending request!
-[debug] [2020-03-13T13:23:08.105Z] [runtime-status] [63634] Ephemeral server handling GET request
-[debug] [2020-03-13T13:23:08.107Z] [runtime-status] [63634] Ephemeral server survived.
-[info] i  functions: Finished "getRunningData" in ~1s
-[debug] [2020-03-13T13:23:08.242Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: IDLE
-[debug] [2020-03-13T13:23:08.242Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-03-13T13:23:55.720Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-03-13T13:23:55.720Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-03-13T13:23:55.720Z] Accepted request POST /rundat-e0a41/us-central1/createRunningData --> createRunningData
-[debug] [2020-03-13T13:23:55.727Z] [worker-pool] addWorker(createRunningData)
-[debug] [2020-03-13T13:23:55.727Z] [worker-pool] Adding worker with key createRunningData, total=1
-[debug] [2020-03-13T13:23:55.727Z] [worker-pool] submitWork(triggerId=createRunningData)
-[debug] [2020-03-13T13:23:55.727Z] [worker-createRunningData-b77a57f3-27e8-457e-88bd-66d53d8aaf5c]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63642.sock
-[debug] [2020-03-13T13:23:55.727Z] [worker-createRunningData-b77a57f3-27e8-457e-88bd-66d53d8aaf5c]: BUSY
-[debug] [2020-03-13T13:23:56.302Z] [runtime-status] [63642] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:23:56.304Z] [runtime-status] [63642] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:23:56.308Z] [runtime-status] [63642] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:23:56.310Z] [runtime-status] [63642] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:23:56.311Z] [runtime-status] [63642] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:23:56.477Z] [runtime-status] [63642] Trigger "createRunningData" has been found, beginning invocation!
-[info] i  functions: Beginning execution of "createRunningData"
-[debug] [2020-03-13T13:23:56.477Z] [runtime-status] [63642] triggerDefinition {"httpsTrigger":{},"name":"createRunningData","entryPoint":"createRunningData"}
-[debug] [2020-03-13T13:23:56.477Z] [runtime-status] [63642] Running createRunningData in mode HTTPS
-[debug] [2020-03-13T13:23:56.482Z] [runtime-status] [63642] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63642.sock
-[debug] [2020-03-13T13:23:56.485Z] [functions] Runtime ready! Sending request!
-[debug] [2020-03-13T13:23:56.519Z] [runtime-status] [63642] Ephemeral server handling POST request
-[debug] [2020-03-13T13:23:57.199Z] [runtime-status] [63642] Ephemeral server survived.
-[info] >  TypeError: Cannot read property 'userHandle' of undefined
-[info] >      at /Users/yousef/codeclan_work/run_dat/functions/index.js:44:53
-[info] i  functions: Finished "createRunningData" in ~1s
-[debug] [2020-03-13T13:23:57.581Z] [worker-createRunningData-b77a57f3-27e8-457e-88bd-66d53d8aaf5c]: IDLE
-[debug] [2020-03-13T13:23:57.581Z] [work-queue] {"queueLength":0,"workRunningCount":0}
-[debug] [2020-03-13T13:24:26.948Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:27.882Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:27.983Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:28.987Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
-[debug] [2020-03-13T13:24:28.987Z] [worker-~diagnostic~-ae9e70fd-27af-475d-a70e-42e88ee56051]: FINISHING
-[debug] [2020-03-13T13:24:28.988Z] [worker-pool] Shutting down IDLE worker (getRunningData)
-[debug] [2020-03-13T13:24:28.988Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: FINISHING
-[debug] [2020-03-13T13:24:28.988Z] [worker-pool] Shutting down IDLE worker (createRunningData)
-[debug] [2020-03-13T13:24:28.988Z] [worker-createRunningData-b77a57f3-27e8-457e-88bd-66d53d8aaf5c]: FINISHING
-[debug] [2020-03-13T13:24:29.008Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:24:29.009Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
-[debug] [2020-03-13T13:24:29.009Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:24:29.009Z] [worker-~diagnostic~-1ae9cefb-2a6d-4bd7-a27a-c9d749b58190]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63643.sock
-[debug] [2020-03-13T13:24:29.009Z] [worker-~diagnostic~-1ae9cefb-2a6d-4bd7-a27a-c9d749b58190]: BUSY
-[debug] [2020-03-13T13:24:29.012Z] [worker-~diagnostic~-ae9e70fd-27af-475d-a70e-42e88ee56051]: exited
-[debug] [2020-03-13T13:24:29.012Z] [worker-~diagnostic~-ae9e70fd-27af-475d-a70e-42e88ee56051]: FINISHED
-[debug] [2020-03-13T13:24:29.012Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: exited
-[debug] [2020-03-13T13:24:29.012Z] [worker-getRunningData-38b91e47-a0c0-4773-8d02-84f2649d53dc]: FINISHED
-[debug] [2020-03-13T13:24:29.012Z] [worker-createRunningData-b77a57f3-27e8-457e-88bd-66d53d8aaf5c]: exited
-[debug] [2020-03-13T13:24:29.013Z] [worker-createRunningData-b77a57f3-27e8-457e-88bd-66d53d8aaf5c]: FINISHED
-[debug] [2020-03-13T13:24:29.281Z] [runtime-status] [63643] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:24:29.283Z] [runtime-status] [63643] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:24:29.285Z] [runtime-status] [63643] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:24:29.286Z] [runtime-status] [63643] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:29.287Z] [runtime-status] [63643] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:29.365Z] [worker-~diagnostic~-1ae9cefb-2a6d-4bd7-a27a-c9d749b58190]: IDLE
-[debug] [2020-03-13T13:24:48.752Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:49.753Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
-[debug] [2020-03-13T13:24:49.753Z] [worker-~diagnostic~-1ae9cefb-2a6d-4bd7-a27a-c9d749b58190]: FINISHING
-[debug] [2020-03-13T13:24:49.753Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
-[debug] [2020-03-13T13:24:49.754Z] [worker-pool] Cleaned up workers for getRunningData: 1 --> 0
-[debug] [2020-03-13T13:24:49.754Z] [worker-pool] Cleaned up workers for createRunningData: 1 --> 0
-[debug] [2020-03-13T13:24:49.761Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:24:49.761Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
-[debug] [2020-03-13T13:24:49.761Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:24:49.761Z] [worker-~diagnostic~-d60f1104-8e99-401f-b017-a160ae5f68c3]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63657.sock
-[debug] [2020-03-13T13:24:49.761Z] [worker-~diagnostic~-d60f1104-8e99-401f-b017-a160ae5f68c3]: BUSY
-[debug] [2020-03-13T13:24:49.763Z] [worker-~diagnostic~-1ae9cefb-2a6d-4bd7-a27a-c9d749b58190]: exited
-[debug] [2020-03-13T13:24:49.763Z] [worker-~diagnostic~-1ae9cefb-2a6d-4bd7-a27a-c9d749b58190]: FINISHED
-[debug] [2020-03-13T13:24:50.312Z] [runtime-status] [63657] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:24:50.314Z] [runtime-status] [63657] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:24:50.319Z] [runtime-status] [63657] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:24:50.321Z] [runtime-status] [63657] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:50.322Z] [runtime-status] [63657] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:50.492Z] [worker-~diagnostic~-d60f1104-8e99-401f-b017-a160ae5f68c3]: IDLE
-[debug] [2020-03-13T13:24:51.998Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:53.003Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
-[debug] [2020-03-13T13:24:53.003Z] [worker-~diagnostic~-d60f1104-8e99-401f-b017-a160ae5f68c3]: FINISHING
-[debug] [2020-03-13T13:24:53.004Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
-[debug] [2020-03-13T13:24:53.020Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:24:53.020Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
-[debug] [2020-03-13T13:24:53.020Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:24:53.020Z] [worker-~diagnostic~-ab21cc12-ee4b-41a1-b8ea-3ccb39a81965]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63666.sock
-[debug] [2020-03-13T13:24:53.021Z] [worker-~diagnostic~-ab21cc12-ee4b-41a1-b8ea-3ccb39a81965]: BUSY
-[debug] [2020-03-13T13:24:53.022Z] [worker-~diagnostic~-d60f1104-8e99-401f-b017-a160ae5f68c3]: exited
-[debug] [2020-03-13T13:24:53.022Z] [worker-~diagnostic~-d60f1104-8e99-401f-b017-a160ae5f68c3]: FINISHED
-[debug] [2020-03-13T13:24:53.423Z] [runtime-status] [63666] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:24:53.425Z] [runtime-status] [63666] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:24:53.426Z] [runtime-status] [63666] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:24:53.427Z] [runtime-status] [63666] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:53.428Z] [runtime-status] [63666] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:53.541Z] [worker-~diagnostic~-ab21cc12-ee4b-41a1-b8ea-3ccb39a81965]: IDLE
-[debug] [2020-03-13T13:24:55.770Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:55.870Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:56.874Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
-[debug] [2020-03-13T13:24:56.874Z] [worker-~diagnostic~-ab21cc12-ee4b-41a1-b8ea-3ccb39a81965]: FINISHING
-[debug] [2020-03-13T13:24:56.874Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
-[debug] [2020-03-13T13:24:56.882Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:24:56.882Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
-[debug] [2020-03-13T13:24:56.882Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:24:56.882Z] [worker-~diagnostic~-159d2d51-d04c-4aa8-9b59-e6b28d94ad91]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63675.sock
-[debug] [2020-03-13T13:24:56.882Z] [worker-~diagnostic~-159d2d51-d04c-4aa8-9b59-e6b28d94ad91]: BUSY
-[debug] [2020-03-13T13:24:56.883Z] [worker-~diagnostic~-ab21cc12-ee4b-41a1-b8ea-3ccb39a81965]: exited
-[debug] [2020-03-13T13:24:56.883Z] [worker-~diagnostic~-ab21cc12-ee4b-41a1-b8ea-3ccb39a81965]: FINISHED
-[debug] [2020-03-13T13:24:57.190Z] [runtime-status] [63675] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:24:57.192Z] [runtime-status] [63675] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:24:57.194Z] [runtime-status] [63675] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:24:57.195Z] [runtime-status] [63675] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:57.196Z] [runtime-status] [63675] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:57.273Z] [worker-~diagnostic~-159d2d51-d04c-4aa8-9b59-e6b28d94ad91]: IDLE
-[debug] [2020-03-13T13:24:58.178Z] File /Users/yousef/codeclan_work/run_dat/functions/index.js changed, reloading triggers
-[debug] [2020-03-13T13:24:59.183Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
-[debug] [2020-03-13T13:24:59.183Z] [worker-~diagnostic~-159d2d51-d04c-4aa8-9b59-e6b28d94ad91]: FINISHING
-[debug] [2020-03-13T13:24:59.184Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
-[debug] [2020-03-13T13:24:59.192Z] [worker-pool] addWorker(~diagnostic~)
-[debug] [2020-03-13T13:24:59.192Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
-[debug] [2020-03-13T13:24:59.192Z] [worker-pool] submitWork(triggerId=)
-[debug] [2020-03-13T13:24:59.192Z] [worker-~diagnostic~-eeee1904-2351-4a2e-9b39-9099a188625b]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63676.sock
-[debug] [2020-03-13T13:24:59.192Z] [worker-~diagnostic~-eeee1904-2351-4a2e-9b39-9099a188625b]: BUSY
-[debug] [2020-03-13T13:24:59.194Z] [worker-~diagnostic~-159d2d51-d04c-4aa8-9b59-e6b28d94ad91]: exited
-[debug] [2020-03-13T13:24:59.195Z] [worker-~diagnostic~-159d2d51-d04c-4aa8-9b59-e6b28d94ad91]: FINISHED
-[debug] [2020-03-13T13:24:59.457Z] [runtime-status] [63676] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:24:59.459Z] [runtime-status] [63676] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:24:59.462Z] [runtime-status] [63676] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:24:59.463Z] [runtime-status] [63676] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:59.464Z] [runtime-status] [63676] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:24:59.547Z] [worker-~diagnostic~-eeee1904-2351-4a2e-9b39-9099a188625b]: IDLE
-[debug] [2020-03-13T13:25:14.498Z] [work-queue] {"queueLength":1,"workRunningCount":0}
-[debug] [2020-03-13T13:25:14.498Z] [work-queue] {"queueLength":0,"workRunningCount":1}
-[debug] [2020-03-13T13:25:14.498Z] Accepted request POST /rundat-e0a41/us-central1/createRunningData --> createRunningData
-[debug] [2020-03-13T13:25:14.498Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
-[debug] [2020-03-13T13:25:14.502Z] [worker-pool] addWorker(createRunningData)
-[debug] [2020-03-13T13:25:14.502Z] [worker-pool] Adding worker with key createRunningData, total=1
-[debug] [2020-03-13T13:25:14.502Z] [worker-pool] submitWork(triggerId=createRunningData)
-[debug] [2020-03-13T13:25:14.502Z] [worker-createRunningData-71df5a6c-9ae3-45d8-8e52-ccdec46fe775]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63679.sock
-[debug] [2020-03-13T13:25:14.502Z] [worker-createRunningData-71df5a6c-9ae3-45d8-8e52-ccdec46fe775]: BUSY
-[debug] [2020-03-13T13:25:14.747Z] [runtime-status] [63679] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
-[debug] [2020-03-13T13:25:14.748Z] [runtime-status] [63679] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
-[debug] [2020-03-13T13:25:14.750Z] [runtime-status] [63679] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-03-13T13:25:14.751Z] [runtime-status] [63679] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:25:14.752Z] [runtime-status] [63679] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-03-13T13:25:14.831Z] [runtime-status] [63679] Trigger "createRunningData" has been found, beginning invocation!
-[info] i  functions: Beginning execution of "createRunningData"
-[debug] [2020-03-13T13:25:14.831Z] [runtime-status] [63679] triggerDefinition {"httpsTrigger":{},"name":"createRunningData","entryPoint":"createRunningData"}
-[debug] [2020-03-13T13:25:14.831Z] [runtime-status] [63679] Running createRunningData in mode HTTPS
-[debug] [2020-03-13T13:25:14.836Z] [runtime-status] [63679] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_63679.sock
-[debug] [2020-03-13T13:25:14.839Z] [functions] Runtime ready! Sending request!
-[debug] [2020-03-13T13:25:14.868Z] [runtime-status] [63679] Ephemeral server handling POST request
-[debug] [2020-03-13T13:25:15.547Z] [runtime-status] [63679] Ephemeral server survived.
-[info] i  functions: Finished "createRunningData" in ~1s
-[debug] [2020-03-13T13:25:15.936Z] [worker-createRunningData-71df5a6c-9ae3-45d8-8e52-ccdec46fe775]: IDLE
-[debug] [2020-03-13T13:25:15.936Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-13T14:37:08.226Z] [worker-getRunningData-40979db9-5dda-4c0e-9321-fd499064863e]: IDLE
+[debug] [2020-03-13T14:37:08.226Z] [work-queue] {"queueLength":0,"workRunningCount":0}
