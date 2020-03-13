@@ -6,6 +6,17 @@ import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
 import firebaseConfig from '../config.js'
 
+// var firebaseConfig = {
+//   apiKey: "AIzaSyAPxyOth-0zQwb5Xp_8Jz7KuQxNe_Zm92U",
+//   authDomain: "rundat-e0a41.firebaseapp.com",
+//   databaseURL: "https://rundat-e0a41.firebaseio.com",
+//   projectId: "rundat-e0a41",
+//   storageBucket: "rundat-e0a41.appspot.com",
+//   messagingSenderId: "101147585416",
+//   appId: "1:101147585416:web:26f6bb0c3143b3974a283d",
+//   measurementId: "G-YL5G1WDK5H"
+// };
+
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
