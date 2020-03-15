@@ -16,7 +16,13 @@ app.get('/runningData', (req,res)=>{
     .then(data =>{
         let runningData=[];
         data.forEach(doc => {
-            runningData.push(doc.data());
+            runningData.push({
+                dataId: doc.id,
+                userHandle: doc.data().userHandle,
+                DistanceKm:doc.data().DistanceKm,
+                DateRecorded: doc.data().DateRecorded,
+                Time:doc.data().Time
+            });
         })
         return res.json(runningData);
     })
@@ -24,25 +30,27 @@ app.get('/runningData', (req,res)=>{
 });
 
 
-// exports.createRunningData= functions.https.onRequest((req, res) => {
-//    const newRunningData={
-//        DistanceKm:req.body.DistanceKm,
-//        Time:req.body.Time,
-//        userHandle:req.body.userHandle
-//    };
+app.post('/runningData',(req, res) => {
+   const newRunningData={
+       DistanceKm:req.body.DistanceKm,
+       Time:req.body.Time,
+       userHandle:req.body.userHandle,
+       DateRecorded: new Date().toISOString()
+
+   };
    
-//     admin    
-//     .firestore()
-//     .collection('runningData')
-//     .add(newRunningData)
-//     .then((doc) =>{
-//         res.json({message:`document ${doc.id} created successfully`});
-//     })
-//     .catch(err=>{
-//         res.status(500).json({error:`${req.body.DistanceKm} if exists, still error`});
-//         console.error(err);
-//     });
-// });
+    admin    
+    .firestore()
+    .collection('runningData')
+    .add(newRunningData)
+    .then((doc) =>{
+        res.json({message:`document ${doc.id} created successfully`});
+    })
+    .catch(err=>{
+        res.status(500).json({error:`Internal server error`});
+        console.error(err);
+    });
+});
 
 exports.api = functions.https.onRequest(app);
  
