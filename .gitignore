@@ -3,6 +3,7 @@
 # API
 config.js
 runDatSDK.json
+*.env
 # dependencies
 /node_modules
 /.pnp
