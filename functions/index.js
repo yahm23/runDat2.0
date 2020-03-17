@@ -20,7 +20,7 @@ app.get('/runningData', (req,res)=>{
                 dataId: doc.id,
                 userHandle: doc.data().userHandle,
                 DistanceKm:doc.data().DistanceKm,
-                DateRecorded: doc.data().DateRecorded,
+                DateRecorded: new Date().toISOString(),
                 Time:doc.data().Time
             });
         })
@@ -52,5 +52,5 @@ app.post('/runningData',(req, res) => {
     });
 });
 
-exports.api = functions.https.onRequest(app);
+exports.api = functions.region('europe-west1').https.onRequest(app);
  
