@@ -1,0 +1,229 @@
+[debug] [2020-03-24T17:05:24.669Z] ----------------------------------------------------------------------
+[debug] [2020-03-24T17:05:24.671Z] Command:       /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2020-03-24T17:05:24.671Z] CLI Version:   7.14.0
+[debug] [2020-03-24T17:05:24.671Z] Platform:      darwin
+[debug] [2020-03-24T17:05:24.671Z] Node Version:  v12.10.0
+[debug] [2020-03-24T17:05:24.672Z] Time:          Tue Mar 24 2020 17:05:24 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-03-24T17:05:24.672Z] ----------------------------------------------------------------------
+[debug] [2020-03-24T17:05:24.672Z] 
+[debug] [2020-03-24T17:05:24.694Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-24T17:05:24.695Z] > authorizing via signed-in user
+[debug] [2020-03-24T17:05:24.695Z] [iam] checking project rundat-e0a41 for permissions ["firebase.projects.get"]
+[debug] [2020-03-24T17:05:24.697Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rundat-e0a41:testIamPermissions  
+
+[debug] [2020-03-24T17:05:25.486Z] <<< HTTP RESPONSE 200
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[debug] [2020-03-24T17:05:25.776Z] [functions] Watching "/Users/yousef/codeclan_work/run_dat/functions" for Cloud Functions...
+[debug] [2020-03-24T17:05:25.793Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-24T17:05:25.794Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-24T17:05:25.794Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-24T17:05:25.795Z] DEBUG: [worker-~diagnostic~-3f1e5f54-ec7a-4069-85f7-a780b53ea075]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62067.sock
+[debug] [2020-03-24T17:05:25.796Z] DEBUG: [worker-~diagnostic~-3f1e5f54-ec7a-4069-85f7-a780b53ea075]: BUSY
+[debug] [2020-03-24T17:05:26.434Z] DEBUG: [runtime-status] [62067] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
+[debug] [2020-03-24T17:05:26.437Z] DEBUG: [runtime-status] [62067] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-24T17:05:26.444Z] DEBUG: [runtime-status] [62067] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-24T17:05:26.449Z] DEBUG: [runtime-status] [62067] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:05:26.452Z] DEBUG: [runtime-status] [62067] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:05:28.472Z] [functions[api]] http function initialized (http://localhost:5000/rundat-e0a41/europe-west1/api).
+[info] i  functions: Loaded functions: api
+[debug] [2020-03-24T17:05:28.485Z] DEBUG: [worker-~diagnostic~-3f1e5f54-ec7a-4069-85f7-a780b53ea075]: IDLE
+[debug] [2020-03-24T17:05:44.821Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-24T17:05:44.821Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-24T17:05:44.822Z] Accepted request POST /rundat-e0a41/europe-west1/api/signup --> api
+[debug] [2020-03-24T17:05:44.830Z] DEBUG: [worker-pool] addWorker(api)
+[debug] [2020-03-24T17:05:44.830Z] DEBUG: [worker-pool] Adding worker with key api, total=1
+[debug] [2020-03-24T17:05:44.830Z] DEBUG: [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-24T17:05:44.831Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:05:44.831Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: BUSY
+[debug] [2020-03-24T17:05:45.100Z] DEBUG: [runtime-status] [62086] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
+[debug] [2020-03-24T17:05:45.102Z] DEBUG: [runtime-status] [62086] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-24T17:05:45.104Z] DEBUG: [runtime-status] [62086] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-24T17:05:45.105Z] DEBUG: [runtime-status] [62086] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:05:45.106Z] DEBUG: [runtime-status] [62086] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:05:46.409Z] DEBUG: [runtime-status] [62086] Trigger "api" has been found, beginning invocation!
+[debug] [2020-03-24T17:05:46.409Z] [functions] Beginning execution of "api"
+[debug] [2020-03-24T17:05:46.409Z] DEBUG: [runtime-status] [62086] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-24T17:05:46.409Z] DEBUG: [runtime-status] [62086] Running api in mode HTTPS
+[debug] [2020-03-24T17:05:46.416Z] DEBUG: [runtime-status] [62086] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:05:46.422Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-03-24T17:05:46.458Z] DEBUG: [runtime-status] [62086] Ephemeral server handling POST request
+[debug] [2020-03-24T17:05:46.463Z] DEBUG: [runtime-status] [62086] Ephemeral server survived.
+[debug] [2020-03-24T17:05:48.488Z] [functions] Finished "api" in ~2s
+[debug] [2020-03-24T17:05:48.488Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: IDLE
+[debug] [2020-03-24T17:05:48.488Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-24T17:06:01.497Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-24T17:06:01.498Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-24T17:06:01.498Z] Accepted request POST /rundat-e0a41/europe-west1/api/login --> api
+[debug] [2020-03-24T17:06:01.498Z] DEBUG: [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-24T17:06:01.498Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:06:01.498Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: BUSY
+[debug] [2020-03-24T17:06:01.501Z] DEBUG: [runtime-status] [62086] Trigger "api" has been found, beginning invocation!
+[debug] [2020-03-24T17:06:01.502Z] [functions] Beginning execution of "api"
+[debug] [2020-03-24T17:06:01.502Z] DEBUG: [runtime-status] [62086] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-24T17:06:01.502Z] DEBUG: [runtime-status] [62086] Running api in mode HTTPS
+[debug] [2020-03-24T17:06:01.502Z] DEBUG: [runtime-status] [62086] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:06:01.503Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-03-24T17:06:01.508Z] DEBUG: [runtime-status] [62086] Ephemeral server handling POST request
+[debug] [2020-03-24T17:06:01.512Z] DEBUG: [runtime-status] [62086] Ephemeral server survived.
+[debug] [2020-03-24T17:06:02.367Z] [functions] Finished "api" in ~1s
+[debug] [2020-03-24T17:06:02.367Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: IDLE
+[debug] [2020-03-24T17:06:02.367Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-24T17:06:43.339Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-24T17:06:43.340Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-24T17:06:43.340Z] Accepted request POST /rundat-e0a41/europe-west1/api/runningData --> api
+[debug] [2020-03-24T17:06:43.340Z] DEBUG: [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-24T17:06:43.340Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:06:43.340Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: BUSY
+[debug] [2020-03-24T17:06:43.341Z] DEBUG: [runtime-status] [62086] Trigger "api" has been found, beginning invocation!
+[debug] [2020-03-24T17:06:43.341Z] [functions] Beginning execution of "api"
+[debug] [2020-03-24T17:06:43.341Z] DEBUG: [runtime-status] [62086] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-24T17:06:43.341Z] DEBUG: [runtime-status] [62086] Running api in mode HTTPS
+[debug] [2020-03-24T17:06:43.341Z] DEBUG: [runtime-status] [62086] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:06:43.344Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-03-24T17:06:43.347Z] DEBUG: [runtime-status] [62086] Ephemeral server handling POST request
+[debug] [2020-03-24T17:06:43.422Z] DEBUG: [runtime-status] [62086] Ephemeral server survived.
+[info] >  {
+[info] >    iss: 'https://securetoken.google.com/rundat-e0a41',
+[info] >    aud: 'rundat-e0a41',
+[info] >    auth_time: 1585069561,
+[info] >    user_id: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    sub: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    iat: 1585069561,
+[info] >    exp: 1585073161,
+[info] >    email: 'testlogi2n@email.com',
+[info] >    email_verified: false,
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'YzxxKjWojSSzUoAlInlywhPAJZi1'
+[info] >  }
+[info] >  Error while verifying token ReferenceError: db is not defined
+[info] >      at /Users/yousef/codeclan_work/run_dat/functions/util/firebaseAuth.js:17:10
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[debug] [2020-03-24T17:06:43.499Z] [functions] Finished "api" in ~1s
+[debug] [2020-03-24T17:06:43.499Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: IDLE
+[debug] [2020-03-24T17:06:43.499Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-24T17:07:18.692Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-24T17:07:18.692Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-24T17:07:18.692Z] Accepted request POST /rundat-e0a41/europe-west1/api/runningData --> api
+[debug] [2020-03-24T17:07:18.692Z] DEBUG: [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-24T17:07:18.692Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:07:18.692Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: BUSY
+[debug] [2020-03-24T17:07:18.693Z] DEBUG: [runtime-status] [62086] Trigger "api" has been found, beginning invocation!
+[debug] [2020-03-24T17:07:18.695Z] [functions] Beginning execution of "api"
+[debug] [2020-03-24T17:07:18.696Z] DEBUG: [runtime-status] [62086] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-24T17:07:18.696Z] DEBUG: [runtime-status] [62086] Running api in mode HTTPS
+[debug] [2020-03-24T17:07:18.697Z] DEBUG: [runtime-status] [62086] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:07:18.698Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-03-24T17:07:18.703Z] DEBUG: [runtime-status] [62086] Ephemeral server handling POST request
+[debug] [2020-03-24T17:07:18.703Z] DEBUG: [runtime-status] [62086] Ephemeral server survived.
+[info] >  {
+[info] >    iss: 'https://securetoken.google.com/rundat-e0a41',
+[info] >    aud: 'rundat-e0a41',
+[info] >    auth_time: 1585069561,
+[info] >    user_id: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    sub: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    iat: 1585069561,
+[info] >    exp: 1585073161,
+[info] >    email: 'testlogi2n@email.com',
+[info] >    email_verified: false,
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'YzxxKjWojSSzUoAlInlywhPAJZi1'
+[info] >  }
+[info] >  Error while verifying token ReferenceError: db is not defined
+[info] >      at /Users/yousef/codeclan_work/run_dat/functions/util/firebaseAuth.js:17:10
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[debug] [2020-03-24T17:07:18.709Z] [functions] Finished "api" in ~1s
+[debug] [2020-03-24T17:07:18.709Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: IDLE
+[debug] [2020-03-24T17:07:18.709Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-24T17:07:46.425Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-24T17:07:46.425Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-24T17:07:46.425Z] Accepted request POST /rundat-e0a41/europe-west1/api/runningData --> api
+[debug] [2020-03-24T17:07:46.425Z] DEBUG: [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-24T17:07:46.426Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:07:46.426Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: BUSY
+[debug] [2020-03-24T17:07:46.427Z] DEBUG: [runtime-status] [62086] Trigger "api" has been found, beginning invocation!
+[debug] [2020-03-24T17:07:46.427Z] [functions] Beginning execution of "api"
+[debug] [2020-03-24T17:07:46.427Z] DEBUG: [runtime-status] [62086] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-24T17:07:46.427Z] DEBUG: [runtime-status] [62086] Running api in mode HTTPS
+[debug] [2020-03-24T17:07:46.429Z] DEBUG: [runtime-status] [62086] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62086.sock
+[debug] [2020-03-24T17:07:46.430Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-03-24T17:07:46.434Z] DEBUG: [runtime-status] [62086] Ephemeral server handling POST request
+[debug] [2020-03-24T17:07:46.434Z] DEBUG: [runtime-status] [62086] Ephemeral server survived.
+[info] >  {
+[info] >    iss: 'https://securetoken.google.com/rundat-e0a41',
+[info] >    aud: 'rundat-e0a41',
+[info] >    auth_time: 1585069547,
+[info] >    user_id: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    sub: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    iat: 1585069547,
+[info] >    exp: 1585073147,
+[info] >    email: 'testlogi2n@email.com',
+[info] >    email_verified: false,
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'YzxxKjWojSSzUoAlInlywhPAJZi1'
+[info] >  }
+[info] >  Error while verifying token ReferenceError: db is not defined
+[info] >      at /Users/yousef/codeclan_work/run_dat/functions/util/firebaseAuth.js:17:10
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[debug] [2020-03-24T17:07:46.437Z] [functions] Finished "api" in ~1s
+[debug] [2020-03-24T17:07:46.438Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: IDLE
+[debug] [2020-03-24T17:07:46.439Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-03-24T17:08:13.937Z] DEBUG: File /Users/yousef/codeclan_work/run_dat/functions/util/firebaseAuth.js changed, reloading triggers
+[debug] [2020-03-24T17:08:14.943Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-03-24T17:08:14.943Z] DEBUG: [worker-~diagnostic~-3f1e5f54-ec7a-4069-85f7-a780b53ea075]: FINISHING
+[debug] [2020-03-24T17:08:14.945Z] DEBUG: [worker-pool] Shutting down IDLE worker (api)
+[debug] [2020-03-24T17:08:14.945Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: FINISHING
+[debug] [2020-03-24T17:08:14.964Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-24T17:08:14.964Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-03-24T17:08:14.964Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-24T17:08:14.964Z] DEBUG: [worker-~diagnostic~-58d5bd34-1fc2-44b5-af8a-3499904880a6]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62113.sock
+[debug] [2020-03-24T17:08:14.965Z] DEBUG: [worker-~diagnostic~-58d5bd34-1fc2-44b5-af8a-3499904880a6]: BUSY
+[debug] [2020-03-24T17:08:14.967Z] DEBUG: [worker-~diagnostic~-3f1e5f54-ec7a-4069-85f7-a780b53ea075]: exited
+[debug] [2020-03-24T17:08:14.968Z] DEBUG: [worker-~diagnostic~-3f1e5f54-ec7a-4069-85f7-a780b53ea075]: FINISHED
+[debug] [2020-03-24T17:08:14.968Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: exited
+[debug] [2020-03-24T17:08:14.968Z] DEBUG: [worker-api-6a7a126e-2040-4596-aa3e-20f639578804]: FINISHED
+[debug] [2020-03-24T17:08:15.843Z] DEBUG: [runtime-status] [62113] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
+[debug] [2020-03-24T17:08:15.845Z] DEBUG: [runtime-status] [62113] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-24T17:08:15.851Z] DEBUG: [runtime-status] [62113] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-24T17:08:15.853Z] DEBUG: [runtime-status] [62113] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:08:15.854Z] DEBUG: [runtime-status] [62113] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:08:16.997Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-03-24T17:08:16.997Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-03-24T17:08:16.997Z] Accepted request POST /rundat-e0a41/europe-west1/api/runningData --> api
+[debug] [2020-03-24T17:08:16.997Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-03-24T17:08:16.997Z] DEBUG: [worker-pool] Cleaned up workers for api: 1 --> 0
+[debug] [2020-03-24T17:08:17.002Z] DEBUG: [worker-pool] addWorker(api)
+[debug] [2020-03-24T17:08:17.002Z] DEBUG: [worker-pool] Adding worker with key api, total=1
+[debug] [2020-03-24T17:08:17.003Z] DEBUG: [worker-pool] submitWork(triggerId=api)
+[debug] [2020-03-24T17:08:17.003Z] DEBUG: [worker-api-42db9ce1-d78c-4c3c-bc58-a841be47e467]: Assigning socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62122.sock
+[debug] [2020-03-24T17:08:17.003Z] DEBUG: [worker-api-42db9ce1-d78c-4c3c-bc58-a841be47e467]: BUSY
+[debug] [2020-03-24T17:08:17.399Z] DEBUG: [runtime-status] [62122] Functions runtime initialized. {"cwd":"/Users/yousef/codeclan_work/run_dat/functions","node_version":"12.10.0"}
+[debug] [2020-03-24T17:08:17.401Z] DEBUG: [runtime-status] [62122] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-24T17:08:17.404Z] DEBUG: [runtime-status] [62122] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-24T17:08:17.407Z] DEBUG: [runtime-status] [62122] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:08:17.409Z] DEBUG: [runtime-status] [62122] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/yousef/codeclan_work/run_dat/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-24T17:08:17.455Z] DEBUG: [worker-~diagnostic~-58d5bd34-1fc2-44b5-af8a-3499904880a6]: IDLE
+[debug] [2020-03-24T17:08:17.986Z] DEBUG: [runtime-status] [62122] Trigger "api" has been found, beginning invocation!
+[debug] [2020-03-24T17:08:17.986Z] [functions] Beginning execution of "api"
+[debug] [2020-03-24T17:08:17.986Z] DEBUG: [runtime-status] [62122] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2020-03-24T17:08:17.986Z] DEBUG: [runtime-status] [62122] Running api in mode HTTPS
+[debug] [2020-03-24T17:08:17.990Z] DEBUG: [runtime-status] [62122] Attempting to listen to socketPath: /var/folders/v5/xxq7ynr55b74x4jsxdx_kbxw0000gn/T/fire_emu_62122.sock
+[debug] [2020-03-24T17:08:17.994Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-03-24T17:08:18.022Z] DEBUG: [runtime-status] [62122] Ephemeral server handling POST request
+[debug] [2020-03-24T17:08:18.101Z] DEBUG: [runtime-status] [62122] Ephemeral server survived.
+[info] >  {
+[info] >    iss: 'https://securetoken.google.com/rundat-e0a41',
+[info] >    aud: 'rundat-e0a41',
+[info] >    auth_time: 1585069547,
+[info] >    user_id: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    sub: 'YzxxKjWojSSzUoAlInlywhPAJZi1',
+[info] >    iat: 1585069547,
+[info] >    exp: 1585073147,
+[info] >    email: 'testlogi2n@email.com',
+[info] >    email_verified: false,
+[info] >    firebase: { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'YzxxKjWojSSzUoAlInlywhPAJZi1'
+[info] >  }
+[debug] [2020-03-24T17:08:19.424Z] [functions] Finished "api" in ~1s
+[debug] [2020-03-24T17:08:19.424Z] DEBUG: [worker-api-42db9ce1-d78c-4c3c-bc58-a841be47e467]: IDLE
+[debug] [2020-03-24T17:08:19.424Z] [work-queue] {"queueLength":0,"workRunningCount":0}
