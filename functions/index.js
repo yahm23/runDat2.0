@@ -11,6 +11,7 @@ admin.initializeApp({
   databaseURL: "https://rundat-e0a41.firebaseio.com"
 });
 const firebase = require('firebase');
+const db = admin.firestore();
 
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -27,13 +28,13 @@ firebase.initializeApp(config);
 
 
 app.get('/runningData', (req,res)=>{
-    admin.firestore().collection('runningData').get()
+    db.collection('runningData').get()
     .then(data =>{
         let runningData=[];
         data.forEach(doc => {
             runningData.push({
                 dataId: doc.id,
-                userHandle: doc.data().userHandle,
+                userName: doc.data().userName,
                 DistanceKm:doc.data().DistanceKm,
                 DateRecorded: new Date().toISOString(),
                 Time:doc.data().Time
@@ -49,16 +50,15 @@ app.post('/runningData',(req, res) => {
    const newRunningData={
        DistanceKm:req.body.DistanceKm,
        Time:req.body.Time,
-       userHandle:req.body.userHandle,
+       userName:req.body.userName,
        DateRecorded: new Date().toISOString()
    };
    
-    admin    
-    .firestore()
+    db
     .collection('runningData')
     .add(newRunningData)
     .then((doc) =>{
-        res.json({message:`document ${doc.id} created successfully ${process.env.REACT_APP_API_KEY}`});
+        res.json({message:`document ${doc.id} created successfully`});
     })
     .catch(err=>{
         res.status(500).json({error:`Internal server error`});
@@ -72,15 +72,68 @@ app.post('/signup', (req,res)=>{
         email:req.body.email,
         password:req.body.password,
         confirmPassword:req.body.confirmPassword,
-        handle:req.body.handle
+        userName:req.body.userName
     };
-    firebase.auth().createUserWithEmailAndPassword(newUser.email,newUser.password)
-    .then(data=> {
-        return res.status(201).json({message:`user ${data.user.uid} has been signed up`})
+
+    //Checking input of new user 
+    let errors = {};
+
+    const emailValidCheck=(email)=>{
+        const regEmailExpression =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(email.match(regEmailExpression)) return true;
+        else return false;
+    }
+
+    const emptyCheck=(input)=>{
+        if(input.trim()===''){return true}
+        else{return false}
+    }
+
+    if(emptyCheck(newUser.email)){
+        errors.email = 'Email must not be empty';
+    } else if(!emailValidCheck(newUser.email)){
+        errors.email = 'Must be a valid email address';
+    }
+    if(emptyCheck(newUser.password)) errors.password='Password must not be empty';
+    if(newUser.password !== newUser.confirmPassword) errors.confirmPassword = 'Passwords must match';
+    if(emptyCheck(newUser.userName)) errors.userName='User Name must not be emmpty';
+
+    if(Object.keys(errors).length>0) return res.status(400).json(errors);
+
+
+    let token, userId;
+    db.doc(`/usersIDs/${newUser.userName}`).get()
+    .then(doc =>{
+        if (doc.exists){
+            return res.status(400).json({userName:'This username is already taken'})
+        }
+        else{
+            return firebase.auth().createUserWithEmailAndPassword(newUser.email,newUser.password)
+        }
     })
+    .then(data => {
+        userId = data.user.uid;
+        return data.user.getIdToken();
+    })
+    .then(idToken =>{
+        token = idToken;
+        const userCreds = {
+            userName : newUser.userName,
+            email : newUser.email,
+            createdAt : new Date().toISOString(),
+            userId
+        }
+        return db.doc(`/usersIDs/${newUser.userName}`).set(userCreds)
+    })
+    .then(()=>{
+        return res.status(201).json({token});
+    })
+
     .catch(err=>{
         console.error(err);
-        res.status(500).json({error: err.code});
+        if (err.code ==='"auth/email-already-in-use'){
+            return res.status(400).json({email:'Email is already in use'})
+        } else{ }
     });
 })
 
