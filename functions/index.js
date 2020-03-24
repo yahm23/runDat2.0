@@ -158,8 +158,11 @@ app.post('/login',(req,res)=>{
     })
     .catch(err => {
         console.error(err);
-        return res.status(500).json({error: err.code})
-    })
+        if(err.code==="auth/wrong-password"){
+            return res.status(403).json({general:'Wrong password, please try again'})
+        } else
+            return res.status(500).json({error: err.code})}
+    )
 })
 
 exports.api = functions.region('europe-west1').https.onRequest(app);
