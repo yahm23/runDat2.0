@@ -65,6 +65,17 @@ app.post('/runningData',(req, res) => {
         console.error(err);
     });
 });
+//Checking methods:
+const emailValidCheck=(email)=>{
+    const regEmailExpression =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(email.match(regEmailExpression)) return true;
+    else return false;
+}
+
+const emptyCheck=(input)=>{
+    if(input.trim()===''){return true}
+    else{return false}
+}
 
 //Sign up route:
 app.post('/signup', (req,res)=>{
@@ -78,16 +89,6 @@ app.post('/signup', (req,res)=>{
     //Checking input of new user 
     let errors = {};
 
-    const emailValidCheck=(email)=>{
-        const regEmailExpression =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if(email.match(regEmailExpression)) return true;
-        else return false;
-    }
-
-    const emptyCheck=(input)=>{
-        if(input.trim()===''){return true}
-        else{return false}
-    }
 
     if(emptyCheck(newUser.email)){
         errors.email = 'Email must not be empty';
@@ -135,6 +136,30 @@ app.post('/signup', (req,res)=>{
             return res.status(400).json({email:'Email is already in use'})
         } else{ }
     });
+});
+
+app.post('/login',(req,res)=>{
+    const user ={
+        email: req.body.email,
+        password: req.body.password
+    };
+
+    let errors={};
+    if(emptyCheck(user.email)) errors.email = 'Email must not be empty';
+    if(emptyCheck(user.password))errors.password = ' password must not be empty';
+    if(Object.keys(errors).length > 0) return res.status(400).json(errors);
+    
+    firebase.auth().signInWithEmailAndPassword(user.email,user.password)
+    .then( (data) =>{
+        return data.user.getIdToken();
+    })
+    .then(token => {
+        return res.json({token});
+    })
+    .catch(err => {
+        console.error(err);
+        return res.status(500).json({error: err.code})
+    })
 })
 
 exports.api = functions.region('europe-west1').https.onRequest(app);
