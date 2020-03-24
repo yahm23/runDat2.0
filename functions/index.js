@@ -45,12 +45,41 @@ app.get('/runningData', (req,res)=>{
     .catch(err=>console.error(err));
 });
 
+const FBAuth = (req,res, next)=>{
+    let idToken;
 
-app.post('/runningData',(req, res) => {
+    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer ')){
+        idToken = req.headers.authorization.split('Bearer ')[1];
+    } else{
+        console.error('No token found')
+        return res.status(403).json({error:'Unauthorized access'})
+    }
+
+    admin.auth().verifyIdToken(idToken)
+    .then(decodedToken =>{
+        req.user = decodedToken;
+        console.log(decodedToken);
+         return db.collection('usersIDs')
+         .where('userId','==',req.user.uid)
+         .limit(1)
+         .get();
+    })
+    .then(data =>{
+        req.user.userName = data.docs[0].data().userName;
+        return next();
+    })
+    .catch(err=>{
+        console.error('Error while verifying token', err);
+        return res.status(403).json(err);
+    })
+}
+
+//Post Runnning data 
+app.post('/runningData',FBAuth, (req, res) => {
    const newRunningData={
        DistanceKm:req.body.DistanceKm,
        Time:req.body.Time,
-       userName:req.body.userName,
+       userName:req.user.userName,
        DateRecorded: new Date().toISOString()
    };
    
@@ -159,7 +188,7 @@ app.post('/login',(req,res)=>{
     .catch(err => {
         console.error(err);
         if(err.code==="auth/wrong-password"){
-            return res.status(403).json({general:'Wrong password, please try again'})
+            return res.status(403).json({general:'Wrong password or username, please try again'})
         } else
             return res.status(500).json({error: err.code})}
     )
