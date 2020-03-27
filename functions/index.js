@@ -8,6 +8,7 @@ const {signup, login,uploadImage} =require('./handlers/users');
 
 
 
+
 //Running Data routes
 app.get('/runningData', getAllRunningData);
 app.post('/runningData',FBAuth, postRunningData);
@@ -16,7 +17,7 @@ app.post('/runningData',FBAuth, postRunningData);
 app.post('/signup',signup);
 app.post('/login',login)
 
-app.post('/iusers/image',FBAuth, uploadImage);
+app.post('/user/image',FBAuth, uploadImage);
 
 exports.api = functions.region('europe-west1').https.onRequest(app);
  
