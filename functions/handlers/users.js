@@ -41,7 +41,7 @@ exports.signup=(req,res)=>{
             userName : newUser.userName,
             email : newUser.email,
             createdAt : new Date().toISOString(),
-            imageUrl: `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${noImg}?alt=media`,
+            imageURL: `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${noImg}?alt=media`,
             userId
         }
         return db.doc(`/usersIDs/${newUser.userName}`).set(userCreds)
