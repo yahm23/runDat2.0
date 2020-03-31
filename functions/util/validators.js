@@ -40,3 +40,17 @@ exports.validateLoginData = (user)=>{
         valid: Object.keys(errors).length ==0? true:false
     }
 }
+
+exports.reduceUserDetails = (data)=>{
+    let userDetails = {}
+    if(data.bio) userDetails.bio = data.bio;
+    if(data.social) {
+        if(data.social.trim().substring(0,4) !== 'http'){
+            userDetails.social=`http://${data.social.trim()}`;
+        } else userDetails.social = data.social;
+    };
+    if(data.location) userDetails.location = data.location;
+    console.log(userDetails);
+    // console.log(data.website);
+    return userDetails;
+}
