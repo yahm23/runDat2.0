@@ -99,6 +99,30 @@ exports.addUserDetails=(req,res)=>{
     })
  }
 
+//Get a user details
+exports.getAuthenticatedUser = (req,res)=>{
+  let userData= {};
+  db.doc(`/usersIDs/${req.user.userName}`).get()
+  .then((doc) =>{
+    if(doc.exists){
+      userData.credentials = doc.data();
+      return db.collection('likes').where('userName','==',req.user.userName).get();
+
+    }
+  })
+  .then(data=>{
+    userData.likes={};
+    data.forEach(doc=>{
+      userData.likes.push(doc.data());
+    });
+    return res.json(userData);
+  })
+  .catch((err) => {
+    console.error(err);
+    return res.status(500).json({ error: 'something went wrong' });
+  });
+
+}
 
 exports.uploadImage =(req, res)=>{
     const BusBoy= require('busboy');
